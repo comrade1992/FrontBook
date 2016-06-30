@@ -1,0 +1,14 @@
+<ion-view view-title="Frontwisegroup Teams">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="team in teams" href="#/app/team/{{team.id}}">
+        <div class="teams">
+         <p>
+           <img class="teamsImg" src="{{team.src}}" />
+           <span>{{team.name}}</span>
+          <img class="logo" src="img/frontwiseLogoIcon.png"/></p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

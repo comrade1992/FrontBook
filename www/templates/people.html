@@ -1,0 +1,123 @@
+<ion-view view-title="Frontwisegroup Employees">
+
+  <ion-content>
+
+    <div class="list">
+      <div class="item item-divider departmentTitle">
+        MANAGING PARTNERS - {{partners}} Members
+      </div>
+
+      <a ng-repeat="partners in managingPartners"
+         ng-click="goToEmployeeProfile(partners.id)"
+         class="item item-thumbnail-left">
+
+        <img class="empImg" ng-src="{{ partners.src }}">
+        <div class="empInfo">
+          <h2>{{ partners.name }}</h2>
+          <p>{{ partners.position }}</p>
+          <icon ng-click="callUser(partners.phone);$event.stopPropagation()" class="ion-ios-telephone"></icon>
+          <icon ng-click="openLinkedin(partners.linkedin);$event.stopPropagation()" class="ion-social-linkedin"></icon>
+          <icon class="ion-social-googleplus"></icon>
+          <icon class="ion-social-skype"></icon>
+        </div>
+      </a>
+
+      <div class="item item-divider departmentTitle">
+        IT DEPARTMENT - {{developersNumber}} Members
+      </div>
+
+      <a ng-repeat="developer in developers"
+         ng-click="goToEmployeeProfile(developer.id)"
+         class="item item-thumbnail-left">
+
+        <img class="empImg" ng-src="{{ developer.src }}">
+        <div class="empInfo">
+          <h2>{{ developer.name }}</h2>
+          <p>{{ developer.position }}</p>
+          <icon ng-click="callUser(developer.phone);$event.stopPropagation()" class="ion-ios-telephone"></icon>
+          <icon ng-click="openLinkedin(developer.linkedin);$event.stopPropagation()" class="ion-social-linkedin"></icon>
+          <icon class="ion-social-googleplus"></icon>
+          <icon class="ion-social-skype"></icon>
+        </div>
+      </a>
+
+      <div class="item item-divider departmentTitle">
+        TOMATO TEAM - {{tomatoesNumber}} Members
+      </div>
+
+      <a ng-repeat="tomato in tomatoes"
+         ng-click="goToEmployeeProfile(tomato.id)"
+         class="item item-thumbnail-left">
+
+        <img class="empImg" ng-src="{{ tomato.src }}">
+        <div class="empInfo">
+          <h2>{{ tomato.name }}</h2>
+          <p>{{ tomato.position }}</p>
+          <icon ng-click="callUser(tomato.phone); $event.stopPropagation()" class="ion-ios-telephone"></icon>
+          <icon ng-click="openLinkedin(tomato.linkedin);$event.stopPropagation()" class="ion-social-linkedin"></icon>
+          <icon class="ion-social-googleplus"></icon>
+          <icon class="ion-social-skype"></icon>
+        </div>
+      </a>
+
+      <div class="item item-divider departmentTitle">
+        TALENT ACQUISITION {{talentsNumber}} Members
+      </div>
+
+      <a ng-repeat="talents in talentAcquisitions"
+         ng-click="goToEmployeeProfile(talents.id)"
+         class="item item-thumbnail-left">
+
+        <img class="empImg" ng-src="{{ talents.src }}">
+        <div class="empInfo">
+          <h2>{{ talents.name }}</h2>
+          <p>{{ talents.position }}</p>
+          <icon ng-click="callUser(talents.phone); $event.stopPropagation()" class="ion-ios-telephone"></icon>
+          <icon ng-click="openLinkedin(talents.linkedin);$event.stopPropagation()" class="ion-social-linkedin"></icon>
+          <icon class="ion-social-googleplus"></icon>
+          <icon class="ion-social-skype"></icon>
+        </div>
+      </a>
+
+      <div class="item item-divider departmentTitle">
+        SALES - {{salesNumber}} Members
+      </div>
+
+      <a ng-repeat="sale in sales"
+         ng-click="goToEmployeeProfile(sale.id)"
+         class="item item-thumbnail-left">
+
+        <img class="empImg" ng-src="{{ sale.src }}">
+        <div class="empInfo">
+          <h2>{{ sale.name }}</h2>
+          <p>{{ sale.position }}</p>
+          <icon ng-click="callUser(sale.phone); $event.stopPropagation()" class="ion-ios-telephone"></icon>
+          <icon ng-click="openLinkedin(sale.linkedin);$event.stopPropagation()" class="ion-social-linkedin"></icon>
+          <icon class="ion-social-googleplus"></icon>
+          <icon class="ion-social-skype"></icon>
+        </div>
+      </a>
+
+      <div class="item item-divider departmentTitle">
+        E - Learning - {{eLearningNumber}} Members
+      </div>
+
+      <a ng-repeat="eLearn in eLearning"
+         ng-click="goToEmployeeProfile(eLearn.id)"
+         class="item item-thumbnail-left">
+
+        <img class="empImg" ng-src="{{ eLearn.src }}">
+        <div class="empInfo">
+          <h2>{{ eLearn.name }}</h2>
+          <p>{{ eLearn.position }}</p>
+          <icon ng-click="callUser(eLearn.phone); $event.stopPropagation()" class="ion-ios-telephone"></icon>
+          <icon ng-click="openLinkedin(eLearn.linkedin);$event.stopPropagation()" class="ion-social-linkedin"></icon>
+          <icon class="ion-social-googleplus"></icon>
+          <icon class="ion-social-skype"></icon>
+        </div>
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>

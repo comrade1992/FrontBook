@@ -1,0 +1,87 @@
+<ion-view>
+
+  <ion-content>
+<div class="list card">
+
+  <div class="item item-body">
+    <img class="full-image" ng-src="img/frLogos.png">
+    <!--<p>
+      This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+      the content is from a card-body consisting of an image and paragraph text. The footer
+      consists of tabs, icons aligned left, within the card-footer.
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>-->
+  </div>
+
+  <div class="item item-avatar empDetails">
+    <img src="{{employees[employeeId].src}}">
+    <h3>{{employees[employeeId].name}}</h3>
+    <h2>{{employees[employeeId].position}}</h2>
+    <p>Birthday - {{employees[employeeId].birthday}}
+    <icon ng-click="callUser(employees[employeeId].phone)" class="ion-ios-telephone"></icon></p>
+  </div>
+
+</div>
+
+    <!--<div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Project Name" ng-model="employees[employeeId].projects[0].name">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Project Description" ng-model="employees[employeeId].projects[0].description">
+      </label>
+      <button class="button button-block button-assertive" ng-click="addNewProject()">
+        Submit
+      </button>
+    </div>-->
+
+    <div class="item item-divider">
+      Projects
+    </div>
+
+    <!-- The Timeline -->
+    <div class="list card">
+    <ul class="timeline">
+
+      <!-- Item 1 -->
+      <li ng-repeat="project in employees[employeeId].projects">
+        <div class="direction-r">
+          <div class="flag-wrapper">
+            <span class="flag">{{project.name}}</span>
+            <span class="time-wrapper"><span class="time">{{project.period}}</span></span>
+          </div>
+          <div class="desc">{{project.description}}</div>
+        </div>
+      </li>
+
+      <!-- Item 2 -->
+      <!--<li>
+        <div class="direction-l">
+          <div class="flag-wrapper">
+            <span class="flag">Apple Inc.</span>
+            <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+          </div>
+          <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
+        </div>
+      </li>-->
+
+      <!-- Item 3 -->
+      <!--<li>
+        <div class="direction-r">
+          <div class="flag-wrapper">
+            <span class="flag">Harvard University</span>
+            <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+          </div>
+          <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+        </div>
+      </li>-->
+
+    </ul>
+    </div>
+
+
+  </ion-content>
+</ion-view>
